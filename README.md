@@ -1,2 +1,5 @@
-# nodejs-adapter-pattern
 The Adapter pattern is a design pattern that allows two incompatible interfaces to work together by converting the interface of one object into an interface that another object expects. In the context of integrating two payment APIs in Node.js, an Adapter could be used to make calls to one API using the interface of the other API.
+
+For example, let's say we have a Node.js application that uses Payment API A to process payments, but we want to switch to Payment API B. However, the two APIs have different interfaces, and our application is tightly coupled to Payment API A's interface. Instead of rewriting the entire application to use Payment API B, we can create an Adapter that provides the same interface as Payment API A but internally uses Payment API B.
+
+To implement this pattern, we can create an Adapter class that encapsulates the logic for converting the calls made to the interface of Payment API A to the interface of Payment API B. The Adapter class would have methods that correspond to the methods in Payment API A, but internally it would use the corresponding methods in Payment API B.
